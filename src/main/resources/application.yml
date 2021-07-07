@@ -1,3 +1,18 @@
 micronaut:
   application:
     name: fretes
+
+#Configuracao padrao healthcheck
+grpc:
+  server:
+    health:
+      enabled: true #default true.
+
+endpoints:
+  all:
+    #port: 8081         #pode trocar de porta para exibir nesta especifica
+    sensitive: false    #se é protegida ou nao o acesso ao endpoint
+  health:
+    enabled: true
+    sensitive: false #default false.
+    details-visible: ANONYMOUS
